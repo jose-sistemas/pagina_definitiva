@@ -1,0 +1,181 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --ancho: 25em;
+    --color:linear-gradient(to right, rgb(72, 78, 84),rgb(52, 58, 64));
+}
+* {
+    margin: 0;
+    padding: 0;
+    color:white;
+}
+
+
+#navbar {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to right, rgb(58, 35, 62),rgb(48, 25, 52))
+}
+
+nav {
+    justify-content: flex-end;
+    display: flex;
+    border-bottom: 1px outset rgb(101, 40, 151);
+}
+
+nav a {
+    padding-left: 20px;
+    padding-right: 30px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+nav a:hover{
+    background-color: rgb(205, 102, 103);
+}
+a{
+      text-decoration: none;
+      color: inherit;
+}
+#welcome-section {
+    margin-top: 60px;
+    scroll-margin-top: 60px;
+}
+
+.titulo {
+    background: linear-gradient(to right, rgb(50,50,50), rgb(20,20,20));
+   
+    text-align: center;
+    height: calc(100vh - 60px);
+    align-content: center;
+    font-size: 2em;
+    font-family: 'Trebuchet MS', Gadget, sans-serif;
+}
+
+#projects {
+background: linear-gradient(to right, rgb(0, 57, 92),rgb(0, 31, 63));
+     height:  calc(100vh + 60px) ;
+    text-align: center;
+
+}
+
+.project-tile {
+    display: inline-block;
+    font-size: 2em;
+    font-family: 'Trebuchet MS', Gadget, sans-serif;
+    padding-top: 150px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid white;
+}
+
+.project-grid {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 40px;
+    
+}
+
+.project-grid p{
+    background-color: rgb(52, 58, 64);
+    width: var(--ancho);
+    margin: 0 auto; 
+    text-align: center; 
+    padding: 5px 0; 
+    border: 2px ridge  rgb(150,150,150);
+    border-top: none;
+
+}
+
+span{
+    font-family:   'Helvetica' ,sans-serif;
+    font-size:1.2em;
+}
+
+img {
+    width: var(--ancho);
+    height: auto;
+    border: 2px ridge  rgb(150,150,150);
+
+}
+
+#contacto{
+    height: 50vw;
+    background: var(--color);
+    display: flex;
+    flex-direction: column;
+    text-align: center; 
+    justify-content: center;
+}
+
+.titulo-contacto{
+    font-size:2.5em;
+    margin-bottom: 10px;
+    font-family: 'Trebuchet MS', Gadget, sans-serif;
+}
+
+
+
+.texto{
+     font-family:Monaco,sans-serif;
+    margin-bottom: 10px;
+    font-size:1em;
+}
+.link-contacto a{
+    margin: 0 0.5em;
+    font-size:1.2em
+}
+footer{
+    background:var(--color) ; 
+    padding:20px 0;
+    border-top:2px solid black;
+    display:flex;
+justify-content: space-between;
+}
+footer p{
+    padding: 0 30px;
+    
+}
+
+@media (max-width: 1768px) {
+    nav a {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+    .titulo {
+        font-size: 1.5em;
+    }
+    .project-tile {
+        font-size: 1.5em;
+        margin-top:-150px;
+    }
+    .titulo-contacto {
+        font-size: 1.8em;
+    }
+    .texto {
+        font-size: 0.9em;
+    }
+}
+@media (max-width: 700px) {
+    .project-grid {
+        grid-template-columns: 1fr; 
+        margin-top:2px;
+    }
+    .project-tile{
+        margin-top:-100px
+    }
+    img {
+        height: 20vw; 
+    }
+}
